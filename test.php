@@ -35,7 +35,7 @@
     }
     log("hasil extract insight", $insight);
 
-    $url = "http://34.124.xx:7505/v1/chat/completions";
+    $url = "http://34.124.xx:7505/v1/chat";
     $header = array(
         "Authorization: Bearer 2w478v-9xbh-uzpaspaig3b6jytj-55h892djw0-d2323awd",
         "Content-Type: application/json"
