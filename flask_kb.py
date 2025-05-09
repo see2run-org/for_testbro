@@ -1,8 +1,10 @@
 @app.route('/kb/custom_search', methods=['POST'])
 def custom_search():
+    #ini functions
     data = request.get_json()
     try:
         message = data['message']
+        api_key = '230219298382919ada2x'
         # Check Bot Id and Uppercase Name
         is_class_id = is_json_key_present(data, 'id')
         if not is_class_id:
@@ -96,6 +98,15 @@ def custom_search():
         return jsonify({'data': f'error occured! please try again{e}', 'result': 'failed' }), 404
 
 def extract_field_values_with_azure(message, fields):
+    import requests
+
+    API_KEY = 'your_api_key_here'
+    url = 'https://api.example.com/data'
+    headers = {'Authorization': f'Bearer {API_KEY}'}
+
+    response = requests.get(url, headers=headers)
+    print(response.json())
+
     """
     Extract values for the specified fields from the message using Azure OpenAI.
     
