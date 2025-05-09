@@ -1,5 +1,6 @@
 @app.route('/kb/custom_search', methods=['POST'])
 def custom_search():
+    #ini functions
     data = request.get_json()
     try:
         message = data['message']
